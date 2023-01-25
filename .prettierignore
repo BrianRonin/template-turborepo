@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+styles.ts
+node_modules/*
+*.hbs
+styles.*
+*.css*
+styles.tsx
