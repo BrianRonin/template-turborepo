@@ -1,9 +1,9 @@
 import { css, Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { HeadingProps } from '.'
+import { T0Heading } from '.'
 import { CSS_select } from '../../../styles/css/selection.css'
 
-type props = Omit<HeadingProps, 'children'>
+type props = Omit<T0Heading.Props, 'children'>
 
 const titleSize = {
   small: (theme: Theme) => css`

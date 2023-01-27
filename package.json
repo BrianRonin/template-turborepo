@@ -1,11 +1,6 @@
 {
   "name": "template-nextjs-turbo-",
-  "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
@@ -14,7 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-main": "*",
+    "eslint-config-main": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
   },

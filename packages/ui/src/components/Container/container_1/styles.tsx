@@ -1,17 +1,17 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Custom } from '.'
+import { T1Container } from '.'
 
-export const Inside = styled.div<Custom>`
+export const Inside = styled.div<T1Container.Custom>`
   ${({ theme, boxShadowOnHover }) => css`
     --box-shadow: ${theme.name === 'default'
       ? theme.colors.bg[3]
-      : theme.colors.bg[2]
-    };
+      : theme.colors.bg[2]};
     --hv-box-shadow: ${theme.name === 'default'
       ? theme.colors[boxShadowOnHover ?? 'bg'][4]
-      : theme.colors[boxShadowOnHover ?? 'primary'][4]
-    };
+      : theme.colors[
+          boxShadowOnHover ?? 'primary'
+        ][4]};
     background: ${theme.colors.bg[0]};
     padding: ${theme.spacings.medium};
     width: 100%;

@@ -1,11 +1,11 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { buttonCustom } from '.'
+import { T0Button } from '.'
 import { dynamicButton } from '../../../styles/css/dynamic-button.css'
 
-type mainProps = {
+export type mainProps = {
   onlyIcon: boolean
-  custom: buttonCustom
+  custom: T0Button.Custom
   outline: boolean
   iconDirection: 'left' | 'right'
 }

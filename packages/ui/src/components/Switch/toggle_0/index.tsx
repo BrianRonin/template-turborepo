@@ -1,23 +1,18 @@
 import { useEffect, useState } from 'react'
 import * as S from './styles'
-export * as S from './styles'
-export * as mock from './mock'
+import * as T from './types'
+export * as S0Toggle from './styles'
+export * as M0Toggle from './mock'
+export * as T0Toggle from './types'
 
-export type toggleProps = {
-  text?: string
-  onChange?: (checked: boolean) => any
-  ifChecked?: () => any
-  ifNoChecked?: () => any
-  initialValue?: () => boolean
-}
-
-export const Toggle = ({
+export const C0Toggle = ({
   text,
   onChange,
   ifChecked,
   ifNoChecked,
   initialValue,
-}: toggleProps) => {
+  meta,
+}: T.Props) => {
   const [checked, setChecked] = useState(
     initialValue ? initialValue() : false
   )
@@ -49,6 +44,7 @@ export const Toggle = ({
           value={text}
           onChange={handleChange}
           checked={checked}
+          {...meta}
         />
         <S.Slider></S.Slider>
       </S.Label>

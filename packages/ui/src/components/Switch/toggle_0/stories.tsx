@@ -1,27 +1,21 @@
-import {
+import type {
   Meta,
-  Story,
-} from '@storybook/react/types-6-0'
-import { Toggle, toggleProps } from '.'
-import { S_Container } from '../../Container/container_0/styles'
-import { mock_toggle } from './mock'
+  StoryObj,
+} from '@storybook/react'
+import { C0Toggle, M0Toggle } from '.'
 
-export default {
-  title: 'components/Switch/Toggle_0',
-  component: Toggle,
-  args: mock_toggle,
-} as Meta
-
-export const Template: Story<toggleProps> = (
-  args,
-) => (
-  <div>
-    <Toggle {...args} />
-  </div>
-)
-
-Template.parameters = {
-  backgrounds: {
-    default: 'light',
+const meta = {
+  title: 'Components/Toggle/C0Toggle',
+  component: C0Toggle,
+  tags: ['autodocs'],
+  args: M0Toggle.default,
+  parameters: {
+    layout: 'centered',
+    background: null,
   },
-}
+} satisfies Meta<typeof C0Toggle>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Base: Story = {}

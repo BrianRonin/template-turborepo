@@ -1,12 +1,10 @@
 import * as S from './styles'
-export * as S from './styles'
-import React from 'react'
+import * as T from './types'
+export * as T0Text from './types'
+export * as S0Text from './styles'
+export * as M0Text from './mock'
 
-export type TextProps = {
-  children: string | React.ReactNode
-}
-
-export const Text = ({ children }: TextProps) => {
+export const C0Text = ({ children }: T.Props) => {
   if (typeof children === 'string') {
     return (
       <S.Main

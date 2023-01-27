@@ -1,32 +1,21 @@
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-import {
-  Meta,
-  Story,
-} from '@storybook/react/types-6-0'
-import { S_Container } from './styles'
+import type { StoryObj } from '@storybook/react'
+import { S0Container } from '.'
 
-export default {
-  title: 'components/Container/Container 0',
-} as Meta
+const meta = {
+  title: 'components/Container/S0Container',
+  component: S0Container.Main,
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+    background: null,
+  },
+}
 
-const _S_Container = styled.div`
-  ${({ theme }) => css`
-    ${S_Container};
-    border: solid 4px black;
-    text-align: center;
-  `}
-`
+export default meta
+type Story = StoryObj<typeof meta>
 
-export const Template: Story = () => (
-  <_S_Container>
-    <h1>conteudo</h1>
-  </_S_Container>
-)
-
-Template.parameters = {
-  layout: 'fullscren',
-  backgrounds: {
-    default: 'dark',
+export const Base: Story = {
+  args: {
+    children: <span>conteudo</span>,
   },
 }

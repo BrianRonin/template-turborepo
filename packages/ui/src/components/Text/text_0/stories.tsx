@@ -1,41 +1,21 @@
-import {
+import type {
   Meta,
-  Story,
-} from '@storybook/react/types-6-0'
-import { Text, TextProps } from '.'
+  StoryObj,
+} from '@storybook/react'
+import { C0Text, M0Text } from '.'
 
-export default {
-  title: 'components/Text/Text_0',
-  component: Text,
-  args: {
-    children: `
-    ipsum dolor sit amet consectetur adipisicing elit. Et nesciunt temp
-    oribus vero atque error magni beatae quaerat quo dolor obcaecati pa
-    riatur ullam fugit, dolorum sit dolore quisquam explicabo eligendi
-    molestias.`,
+const meta = {
+  title: 'Components/Text/C0Text',
+  component: C0Text,
+  tags: ['autodocs'],
+  args: M0Text.default,
+  parameters: {
+    layout: 'centered',
+    background: null,
   },
-  argTypes: {
-    children: { type: 'string' },
-  },
-} as Meta
+} satisfies Meta<typeof C0Text>
 
-export const Template: Story<TextProps> = (
-  args,
-) => {
-  return (
-    <div
-      style={{
-        maxWidth: '64rem',
-        padding: '3rem',
-      }}
-    >
-      <Text {...args} />
-    </div>
-  )
-}
+export default meta
+type Story = StoryObj<typeof meta>
 
-Template.parameters = {
-  backgrounds: {
-    disable: true,
-  },
-}
+export const Base: Story = {}

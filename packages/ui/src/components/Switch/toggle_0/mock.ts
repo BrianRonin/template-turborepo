@@ -1,5 +1,5 @@
-import { toggleProps } from '.'
+import { T0Toggle } from '.'
 
-export const mock_toggle = {
+export default {
   text: ':D',
-} as toggleProps
+} as T0Toggle.Props

@@ -1,19 +1,21 @@
 import * as S from './styles'
-export * as S from './styles'
-export * as mock from './mock'
+export * as S0ToggleTheme from './styles'
 
-import { Toggle } from '../toggle_0'
 import { useContext } from 'react'
 import { if_window } from '../../../utils/is-window'
-import { Context } from '../../../contexts/theme/theme'
+import { Context } from '../../../contexts/theme'
+import { C0Toggle } from '../toggle_0'
 
+/**
+ * Dependencias:
+ * - C0Toggle
+ */
 export const ToggleTheme = () => {
   const { setTheme } = useContext(Context)
   const changeTheme = (check: boolean) => {
     return if_window(() => {
       localStorage.setItem('myCat', 'Tom')
       setTheme(check ? 'dark' : 'light')
-      console.log(check)
     })
   }
 
@@ -24,7 +26,6 @@ export const ToggleTheme = () => {
           localStorage.getItem('theme')
         if (!localTheme) return false
         const newTheme = JSON.parse(localTheme)
-        console.log(newTheme.name)
         return newTheme.name === 'dark'
       },
       () => false
@@ -33,7 +34,7 @@ export const ToggleTheme = () => {
 
   return (
     <S.Main>
-      <Toggle
+      <C0Toggle
         onChange={changeTheme}
         initialValue={currentTheme}
       />

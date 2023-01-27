@@ -1,0 +1,87 @@
+  :root {
+    --bg: black;
+    --text: white;
+    --textCode: rgb(193, 231, 238);
+    --type: rgb(216, 241, 204);
+  }
+
+
+  .sbdocs-wrapper {
+    background: var(--bg) !important;
+  }
+
+  .sbdocs-h3,
+  .sbdocs-h2,
+  .sbdocs-h1 {
+    color: var(--text) !important;
+    background: var(--bg) !important;
+  }
+
+  table,
+  th,
+  td,
+  tr,
+  .docblock-argstable {
+    background: var(--bg) !important;
+  }
+
+  .sbdocs-title {
+    color: var(--text) !important;
+    background: var(--bg) !important;
+  }
+
+  .sbdocs-title+div>p {
+    color: var(--text) !important;
+    background: var(--bg) !important;
+  }
+
+  .sbdocs-title+div>ul>li {
+    color: var(--text) !important;
+    background: var(--bg) !important;
+  }
+
+  /*    ARG-TABLE    */
+  /*  Title  */
+  .docblock-argstable>thead>tr>th>span {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    border: none;
+  }
+
+  /*  Body TD  */
+  .docblock-argstable>tbody>tr>td {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    border: none;
+    font-size: 1.3em;
+  }
+
+  /*  Code */
+  .docblock-argstable>tbody>tr>td>div>span>code {
+    background: var(--bg) !important;
+    color: var(--textCode) !important;
+    border: none;
+    font-size: 1em;
+  }
+
+  .docblock-argstable>tbody>tr>td>div>p>code {
+    background: var(--bg) !important;
+    color: var(--textCode) !important;
+    border: none;
+    font-size: 1em;
+  }
+
+  /*  Type  */
+  .docblock-argstable>tbody>tr>td>div>div>span {
+    background: var(--bg) !important;
+    color: var(--type) !important;
+    border: none;
+    font-size: 1em;
+  }
+
+  /*  Description  */
+  .docblock-argstable>tbody>tr>td>div>span {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    border: none;
+  }

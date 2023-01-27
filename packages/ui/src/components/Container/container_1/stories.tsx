@@ -1,24 +1,21 @@
-import {
+import type {
   Meta,
-  Story,
-} from '@storybook/react/types-6-0'
-import { Container, containerProps } from '.'
-import { mock_container } from './mock'
+  StoryObj,
+} from '@storybook/react'
+import { C1Container, M1Container } from '.'
 
-export default {
-  title: 'components/Container/container 1',
-  component: Container,
-  args: mock_container,
-} as Meta
-
-export const Template: Story<containerProps> = (
-  args,
-) => <Container {...args} />
-
-Template.parameters = {
-  layout: 'fullscren',
-  backgrounds: {
-    disable: true,
-    default: 'light',
+const meta = {
+  title: 'Components/Container/C1Container',
+  component: C1Container,
+  tags: ['autodocs'],
+  args: M1Container.default,
+  parameters: {
+    layout: 'centered',
+    background: null,
   },
-}
+} satisfies Meta<typeof C1Container>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Base: Story = {}

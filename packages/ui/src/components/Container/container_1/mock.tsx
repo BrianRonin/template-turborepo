@@ -1,7 +1,7 @@
-import { containerProps } from '.'
+import { T1Container } from '.'
 
 const mock_container = {
   children: ':D',
-} as containerProps
+} as T1Container.Props
 
 export default mock_container

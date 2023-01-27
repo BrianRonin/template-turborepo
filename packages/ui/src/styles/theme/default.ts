@@ -17,150 +17,142 @@ import {
 
 // ! orderm brilho --> escuro
 
-export const cl_primary = {
-  color: 'hsl(53, 35%, 50%)',
-  length: 5,
-  position: 'middle',
-  incMatrix: 3,
-  incLight: 10,
-} as hslProps
+interface AllColors {
+  primary: hslProps
+  secondary: hslProps
+  text: hslProps
+  bg: hslProps
+  warning: hslProps
+  success: hslProps
+  info: hslProps
+  black: hslProps
+  white: hslProps
+}
 
-export const cl_secondary = {
-  color: 'hsl(296, 30%, 44%)',
-  length: 5,
-  position: 'middle',
-  incMatrix: 10,
-  incLight: 15,
-} as hslProps
-
-export const cl_text = {
-  color: 'hsl(52, 20%, 90%)',
-  length: 5,
-  position: 'start',
-  incMatrix: 3,
-  incLight: 20,
-  incSaturation: 5,
-} as hslProps
-
-export const cl_bg = {
-  color: 'hsl(0, 0%, 100%)',
-  length: 9,
-  position: 'start',
-  incLight: 11,
-} as hslProps
-
-export const cl_warning = {
-  color: 'hsl(41, 50%, 53%)',
-  length: 5,
-  position: 'middle',
-  incLight: 5,
-  incSaturation: 15,
-  incMatrix: 3,
-} as hslProps
-
-export const cl_success = {
-  color: 'hsl(148, 51%, 60%)',
-  length: 5,
-  position: 'middle',
-  incLight: 10,
-  incSaturation: 15,
-  incMatrix: 3,
-} as hslProps
-
-export const cl_info = {
-  color: 'hsl(286, 55%, 61%)',
-  length: 5,
-  position: 'middle',
-  incLight: 15,
-  incSaturation: 15,
-  incMatrix: 3,
-} as hslProps
-
-export const cl_black = {
-  color: 'hsl(0, 0%, 0%)',
-  length: 21,
-  position: 'start',
-  orderLight: true,
-  incLight: 5,
-} as hslProps
-
-export const cl_white = {
-  color: 'hsl(0, 0%, 100%)',
-  length: 21,
-  position: 'start',
-  incLight: 5,
-} as hslProps
+export const colors: AllColors = {
+  // 'hsl(73, 35%, 94%, 1)',
+  // 'hsl(63, 35%, 72%, 1)',
+  // 'hsl(53, 35%, 50%)',
+  // 'hsl(43, 35%, 28%, 1)',
+  // 'hsl(33, 35%, 6%, 1)',
+  primary: {
+    color: 'hsl(53, 35%, 50%)',
+    length: 5,
+    position: 'middle',
+    incMatrix: 3,
+    incLight: 10,
+  },
+  // 'hsl(292, 30%, 72%, 1)',
+  // 'hsl(294, 30%, 58%, 1)',
+  // 'hsl(296, 30%, 44%)',
+  // 'hsl(298, 30%, 30%, 1)',
+  // 'hsl(300, 30%, 16%, 1)'
+  secondary: {
+    color: 'hsl(296, 30%, 44%)',
+    length: 5,
+    position: 'middle',
+    incMatrix: 10,
+    incLight: 15,
+  },
+  // 'hsl(52, 20%, 90%)',
+  // 'hsl(49, 15%, 69%, 1)',
+  // 'hsl(46, 10%, 48%, 1)',
+  // 'hsl(43, 5%, 27%, 1)',
+  // 'hsl(40, 0%, 6%, 1)'
+  text: {
+    color: 'hsl(52, 20%, 90%)',
+    length: 5,
+    position: 'start',
+    incMatrix: 3,
+    incLight: 20,
+    incSaturation: 5,
+  },
+  //   'hsl(0, 0%, 100%)',
+  //   'hsl(0, 0%, 70%, 1)',
+  //   'hsl(0, 0%, 40%, 1)',
+  //   'hsl(0, 0%, 10%, 1)',
+  //   'hsl(0, 0%, 0%, 1)'
+  bg: {
+    color: 'hsl(0, 0%, 100%)',
+    length: 9,
+    position: 'start',
+    incLight: 11,
+  },
+  // 'hsl(47, 80%, 73%, 1)',
+  // 'hsl(44, 65%, 63%, 1)',
+  // 'hsl(41, 50%, 53%)',
+  // 'hsl(38, 35%, 43%, 1)',
+  // 'hsl(35, 20%, 33%, 1)'
+  warning: {
+    color: 'hsl(41, 50%, 53%)',
+    length: 5,
+    position: 'middle',
+    incLight: 5,
+    incSaturation: 15,
+    incMatrix: 3,
+  },
+  // 'hsl(154, 81%, 80%, 1)',
+  // 'hsl(151, 66%, 70%, 1)',
+  // 'hsl(148, 51%, 60%)',
+  // 'hsl(145, 36%, 50%, 1)',
+  // 'hsl(142, 21%, 40%, 1)'
+  success: {
+    color: 'hsl(148, 51%, 60%)',
+    length: 5,
+    position: 'middle',
+    incLight: 10,
+    incSaturation: 15,
+    incMatrix: 3,
+  },
+  // 'hsl(280, 85%, 81%, 1)',
+  // 'hsl(283, 70%, 71%, 1)',
+  // 'hsl(286, 55%, 61%)',
+  // 'hsl(289, 40%, 51%, 1)',
+  // 'hsl(292, 25%, 41%, 1)'
+  info: {
+    color: 'hsl(286, 55%, 61%)',
+    length: 5,
+    position: 'middle',
+    incLight: 15,
+    incSaturation: 15,
+    incMatrix: 3,
+  },
+  black: {
+    color: 'hsl(0, 0%, 0%)',
+    length: 21,
+    position: 'start',
+    orderLight: true,
+    incLight: 5,
+  },
+  white: {
+    color: 'hsl(0, 0%, 100%)',
+    length: 21,
+    position: 'start',
+    incLight: 5,
+  },
+}
 
 export const DefaultTheme = {
   name: 'default',
   colors: {
-    // 'hsl(73, 35%, 94%, 1)',
-    // 'hsl(63, 35%, 72%, 1)',
-    // 'hsl(53, 35%, 50%)',
-    // 'hsl(43, 35%, 28%, 1)',
-    // 'hsl(33, 35%, 6%, 1)',
-
-    primary: makeHsl(cl_primary),
-    _primary: makeHsl(cl_primary),
-
-    // 'hsl(292, 30%, 72%, 1)',
-    // 'hsl(294, 30%, 58%, 1)',
-    // 'hsl(296, 30%, 44%)',
-    // 'hsl(298, 30%, 30%, 1)',
-    // 'hsl(300, 30%, 16%, 1)'
-
-    secondary: makeHsl(cl_secondary),
-    _secondary: makeHsl(cl_secondary),
-
-    // 'hsl(52, 20%, 90%)',
-    // 'hsl(49, 15%, 69%, 1)',
-    // 'hsl(46, 10%, 48%, 1)',
-    // 'hsl(43, 5%, 27%, 1)',
-    // 'hsl(40, 0%, 6%, 1)'
-
-    text: makeHsl(cl_text),
-    _text: makeHsl(cl_text),
-
-    //   'hsl(0, 0%, 100%)',
-    //   'hsl(0, 0%, 70%, 1)',
-    //   'hsl(0, 0%, 40%, 1)',
-    //   'hsl(0, 0%, 10%, 1)',
-    //   'hsl(0, 0%, 0%, 1)'
-
-    bg: makeHsl(cl_bg),
-    _bg: makeHsl(cl_bg),
-
-    // 'hsl(47, 80%, 73%, 1)',
-    // 'hsl(44, 65%, 63%, 1)',
-    // 'hsl(41, 50%, 53%)',
-    // 'hsl(38, 35%, 43%, 1)',
-    // 'hsl(35, 20%, 33%, 1)'
-
-    warning: makeHsl(cl_warning),
-    _warning: makeHsl(cl_warning),
-
-    // 'hsl(154, 81%, 80%, 1)',
-    // 'hsl(151, 66%, 70%, 1)',
-    // 'hsl(148, 51%, 60%)',
-    // 'hsl(145, 36%, 50%, 1)',
-    // 'hsl(142, 21%, 40%, 1)'
-
-    success: makeHsl(cl_success),
-    _success: makeHsl(cl_success),
-
-    // 'hsl(280, 85%, 81%, 1)',
-    // 'hsl(283, 70%, 71%, 1)',
-    // 'hsl(286, 55%, 61%)',
-    // 'hsl(289, 40%, 51%, 1)',
-    // 'hsl(292, 25%, 41%, 1)'
-
-    info: makeHsl(cl_info),
-    _info: makeHsl(cl_info),
-
-    black: makeHsl(cl_black),
-    _black: makeHsl(cl_black),
-    white: makeHsl(cl_white),
-    _white: makeHsl(cl_white),
+    primary: makeHsl(colors.primary),
+    _primary: makeHsl(colors.primary),
+    secondary: makeHsl(colors.secondary),
+    _secondary: makeHsl(colors.secondary),
+    text: makeHsl(colors.text),
+    _text: makeHsl(colors.text),
+    bg: makeHsl(colors.bg),
+    _bg: makeHsl(colors.bg),
+    warning: makeHsl(colors.warning),
+    _warning: makeHsl(colors.warning),
+    success: makeHsl(colors.success),
+    _success: makeHsl(colors.success),
+    info: makeHsl(colors.info),
+    _info: makeHsl(colors.info),
+    black: makeHsl(colors.black),
+    _black: makeHsl(colors.black),
+    white: makeHsl(colors.white),
+    _white: makeHsl(colors.white),
   },
   fonts: {
     family: {
@@ -286,3 +278,24 @@ export const DefaultTheme = {
     '10',
   ],
 }
+
+type Pallete = {
+  name: string
+  colors: string[]
+}
+
+export const palleteColors = (() =>
+  Object.keys(DefaultTheme.colors).reduce<
+    Pallete[]
+  >((prev, key) => {
+    return [
+      ...prev,
+      {
+        name: key,
+        colors:
+          DefaultTheme.colors[
+            key as keyof typeof DefaultTheme.colors
+          ],
+      },
+    ]
+  }, []))()

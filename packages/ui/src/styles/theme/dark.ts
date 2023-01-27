@@ -1,50 +1,42 @@
 import { makeHsl } from '../../utils/make-hsl'
-import {
-  cl_bg,
-  cl_black,
-  cl_info,
-  cl_primary,
-  cl_secondary,
-  cl_success,
-  cl_text,
-  cl_warning,
-  cl_white,
-  DefaultTheme,
-} from './default'
+import { colors, DefaultTheme } from './default'
 
 export const dark_theme = {
   ...DefaultTheme,
   name: 'dark',
   colors: {
     ...DefaultTheme.colors,
-    black: makeHsl(cl_white),
-    white: makeHsl(cl_black),
+    black: makeHsl(colors.white),
+    white: makeHsl(colors.black),
     bg: makeHsl({
-      ...cl_bg,
+      ...colors.bg,
       color: 'hsl(0, 0%, 100%)',
       position: 'end',
       orderLight: true,
     }),
     primary: makeHsl({
-      ...cl_primary,
+      ...colors.primary,
       inverse: true,
     }),
     secondary: makeHsl({
-      ...cl_secondary,
+      ...colors.secondary,
       inverse: true,
     }),
     text: makeHsl({
-      ...cl_text,
+      ...colors.text,
       inverse: true,
       position: 'end',
     }),
     warning: makeHsl({
-      ...cl_warning,
+      ...colors.warning,
       inverse: true,
     }),
-    info: makeHsl({ ...cl_info, inverse: true }),
+    info: makeHsl({
+      ...colors.info,
+      inverse: true,
+    }),
     success: makeHsl({
-      ...cl_success,
+      ...colors.success,
       inverse: true,
     }),
   },

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 
-export const Container = styled.div`
+export const Main = styled.div`
   ${({ theme }) => css`
     max-width: 80rem;
     margin: 8rem auto;

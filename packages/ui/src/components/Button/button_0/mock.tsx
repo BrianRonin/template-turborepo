@@ -1,9 +1,8 @@
-import { buttonProps } from '.'
-
-const mock_button = {
+import { Props } from './types'
+const mock: Props = {
   children: 'children',
-  isLoading: false,
-  disabled: false,
-} as buttonProps
+  iconDirection: 'left',
+  outline: false,
+}
 
-export default mock_button
+export default mock

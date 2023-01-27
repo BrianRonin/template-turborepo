@@ -1,21 +1,21 @@
-import {
+import type {
   Meta,
-  Story,
-} from '@storybook/react/types-6-0'
-import { Heading, HeadingProps } from '.'
+  StoryObj,
+} from '@storybook/react'
+import { C0Heading, M0Heading } from '.'
 
-export default {
-  title: 'components/Text/Heading_0',
-  component: Heading,
-  args: {
-    children: 'Testando o heading',
+const meta = {
+  title: 'Components/Text/C0Heading',
+  component: C0Heading,
+  tags: ['autodocs'],
+  args: M0Heading.default,
+  parameters: {
+    layout: 'centered',
+    background: null,
   },
-  argTypes: {
-    children: { type: 'string' },
-    light: { type: 'boolean' },
-  },
-} as Meta
+} satisfies Meta<typeof C0Heading>
 
-export const Template: Story<HeadingProps> = (
-  args,
-) => <Heading {...args} />
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Base: Story = {}

@@ -1,20 +1,15 @@
-import { ReactNode } from 'react'
 import * as S from './styles'
-export * as S from './styles'
+import * as T from './types'
+export * as S0Heading from './styles'
+export * as T0Heading from './types'
+export * as M0Heading from './mock'
 
-export type HeadingProps = {
-  children: ReactNode
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  size?: 'huge' | 'big' | 'medium' | 'small'
-  uppercase?: boolean
-}
-
-export const Heading = ({
+export const C0Heading = ({
   children = 'testando componente',
   as = 'h2',
   size = 'huge',
   uppercase = false,
-}: HeadingProps) => {
+}: T.Props) => {
   return (
     <S.Main
       as={as}

@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { toggleProps } from '.'
 
 export const Main = styled.div`
   ${({ theme }) => css`

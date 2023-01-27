@@ -1,24 +1,14 @@
-import { ReactNode, HTMLAttributes } from 'react'
 import * as S from './styles'
-export * as S from './styles'
-export * as mock from './mock'
+import * as T from './types'
+export * as S1Container from './styles'
+export * as M1Container from './mock'
+export * as T1Container from './types'
 
-export type Custom = {
-  boxShadowOnHover?: 'bg' | 'primary'
-  isForm?: boolean
-}
-
-export type containerProps = {
-  children: ReactNode
-  custom?: Custom
-  meta?: HTMLAttributes<HTMLDivElement>
-}
-
-export const Container = ({
+export const C1Container = ({
   children,
   custom,
   meta,
-}: containerProps) => {
+}: T.Props) => {
   return (
     <S.Main {...meta}>
       <S.Inside

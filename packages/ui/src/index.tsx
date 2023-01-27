@@ -1,7 +1,7 @@
 export { ThemeProvider } from '@emotion/react'
 import { dark_theme } from './styles/theme/dark'
 import { DefaultTheme } from './styles/theme/default'
-import * as theme from './contexts/theme/theme'
+import * as theme from './contexts/theme'
 export { useTheme } from '@emotion/react'
 export * as GlobalStyles from './styles/globals'
 
@@ -27,8 +27,7 @@ export * as ToggleTheme0 from './components/Switch/toggle_theme'
 
 // * Buttons
 export * as Button0 from './components/Button/button_0'
-export * as Button1 from './components/Button/button_1'
-export * as RoundButton0 from './components/Button/round_button_0'
+// export * as Button1 from './components/Button/button_1'
 
 // * Containers
 export * as Container0 from './components/Container/container_0/styles'
