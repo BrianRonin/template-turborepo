@@ -5,5 +5,5 @@ import { themes } from '@storybook/theming'
 import { myThema } from './my-thema.css'
 
 addons.setConfig({
-  theme: { ...themes.dark, ...myThema },
+  theme: { ...myThema },
 })

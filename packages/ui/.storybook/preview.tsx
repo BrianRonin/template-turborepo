@@ -6,7 +6,7 @@ import {
 import { DefaultTheme } from '../src/styles/theme/default'
 import { dark_theme } from '../src/styles/theme/dark'
 import { PrismjsTheme } from './prismjs-theme'
-import GlobalStyles from '../src/styles/globals'
+import GlobalStyles from '../src/styles/globals.css'
 import { onlyStory } from './styles.css'
 
 export const globalTypes = {

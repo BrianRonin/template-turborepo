@@ -42,23 +42,20 @@ export const C0Button: React.FC<T.Props> = (
       ref,
     },
     setSettings,
-  ] = useState({
-    ...preset,
-    ...userSettings,
-  })
+  ] = useState(preset)
 
   useEffect(() => {
     userSettings.isLoading
       ? setSettings({
           ...preset,
-          ...userSettings,
+          ...userSettings.loadingSettings,
         })
       : setSettings({
           ...preset,
           ...userSettings,
         })
-    return () => setSettings({})
-  }, [userSettings, theme])
+    return () => setSettings(preset)
+  }, [userSettings])
 
   const onlyIcon =
     typeof children === 'undefined' &&

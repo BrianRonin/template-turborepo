@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 
 export const Main = styled.div`
   ${({ theme }) => css`
-    max-width: 80rem;
-    margin: 8rem auto;
-    background: ${theme.colors.white};
-    padding: ${theme.spacings.xlarge};
+    max-width: ${theme.frameSizes.tabletM};
+    margin: ${theme.sizes[20]} auto;
+    background: ${theme.colors.white[2]};
+    padding: ${theme.sizes[3]};
   `}
 `

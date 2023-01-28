@@ -3,10 +3,10 @@ import { dark_theme } from './styles/theme/dark'
 import { DefaultTheme } from './styles/theme/default'
 import * as theme from './contexts/theme'
 export { useTheme } from '@emotion/react'
-export * as GlobalStyles from './styles/globals'
+export * as GlobalStyles from './styles/globals.css'
 
 // *** Styles *** //
-export * from './styles/globals'
+export * from './styles/globals.css'
 export const Theme = {
   ...theme,
   themes: {

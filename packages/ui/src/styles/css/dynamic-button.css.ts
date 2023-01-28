@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css, Theme } from '@emotion/react'
 
 type dynamicButtonProps = {
   brightness?: boolean
@@ -6,6 +6,7 @@ type dynamicButtonProps = {
   scaleWhenActive?: boolean
 }
 export const dynamicButton = (
+  theme: Theme,
   {
     brightness,
     disabled,
@@ -14,7 +15,7 @@ export const dynamicButton = (
     brightness: true,
     disabled: true,
     scaleWhenActive: true,
-  },
+    },
 ) => {
   return css`
     &:focus {
@@ -36,9 +37,9 @@ export const dynamicButton = (
       cursor: not-allowed;
       ${!!scaleWhenActive &&
       css`
-        &:active {
+        /* &:active {
           transform: translate(1px, 0);
-        }
+        } */
         &:hover {
           filter: none;
         }
@@ -46,9 +47,9 @@ export const dynamicButton = (
     }
 
     &:active {
-      ${!!scaleWhenActive &&
+      ${!!scaleWhenActive && theme &&
       css`
-        transform: scale(0.99, 0.99);
+        transform: scale(0.95, 0.95);
       `}
     }
 

@@ -1,15 +1,51 @@
 export type hslProps = {
+  /**
+   * Length must be an odd number to work correctly
+   */
   length: number
+  /**
+   * This is the main color, it must be in HSL
+   */
   color: [number, number, number, number] | string
+  /**
+   * Choose where the main color is in relation to the color palette that will be returned
+   */
   position?: 'start' | 'middle' | 'end'
+  /**
+   * Setting "inverse" to true will invert all orders
+   */
   inverse?: boolean
+  /**
+   * revert order of matrix
+   */
   orderMatrix?: boolean
+  /**
+   * reverse order of saturation
+   */
   orderSaturation?: boolean
+  /**
+   * reverse order of light
+   */
   orderLight?: boolean
+  /**
+   * reverse order of alpha
+   */
   orderAlpha?: boolean
+  /**
+   * reverse order of matrix
+   */
   incMatrix?: number
+  /**
+   * reverse order of saturation
+   */
   incSaturation?: number
+  /**
+   * increment light
+   */
   incLight?: number
+  /**
+   * increment alpha
+   */
   incAlpha?: number
 }
 

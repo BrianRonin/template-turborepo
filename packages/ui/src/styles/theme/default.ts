@@ -2,6 +2,7 @@ import {
   hslProps,
   makeHsl,
 } from '../../utils/make-hsl'
+import { makeValue } from '../../utils/make-size'
 
 // ? para fazer uma cor boa escolha bastante tons
 // ? hsl(matriz, saturação, brilho, alpha)
@@ -30,11 +31,9 @@ interface AllColors {
 }
 
 export const colors: AllColors = {
-  // 'hsl(73, 35%, 94%, 1)',
-  // 'hsl(63, 35%, 72%, 1)',
-  // 'hsl(53, 35%, 50%)',
-  // 'hsl(43, 35%, 28%, 1)',
-  // 'hsl(33, 35%, 6%, 1)',
+  /**
+   * Length: 5
+   */
   primary: {
     color: 'hsl(53, 35%, 50%)',
     length: 5,
@@ -42,11 +41,9 @@ export const colors: AllColors = {
     incMatrix: 3,
     incLight: 10,
   },
-  // 'hsl(292, 30%, 72%, 1)',
-  // 'hsl(294, 30%, 58%, 1)',
-  // 'hsl(296, 30%, 44%)',
-  // 'hsl(298, 30%, 30%, 1)',
-  // 'hsl(300, 30%, 16%, 1)'
+  /**
+   * Length: 5
+   */
   secondary: {
     color: 'hsl(296, 30%, 44%)',
     length: 5,
@@ -54,11 +51,9 @@ export const colors: AllColors = {
     incMatrix: 10,
     incLight: 15,
   },
-  // 'hsl(52, 20%, 90%)',
-  // 'hsl(49, 15%, 69%, 1)',
-  // 'hsl(46, 10%, 48%, 1)',
-  // 'hsl(43, 5%, 27%, 1)',
-  // 'hsl(40, 0%, 6%, 1)'
+  /**
+   * Length: 5
+   */
   text: {
     color: 'hsl(52, 20%, 90%)',
     length: 5,
@@ -67,22 +62,18 @@ export const colors: AllColors = {
     incLight: 20,
     incSaturation: 5,
   },
-  //   'hsl(0, 0%, 100%)',
-  //   'hsl(0, 0%, 70%, 1)',
-  //   'hsl(0, 0%, 40%, 1)',
-  //   'hsl(0, 0%, 10%, 1)',
-  //   'hsl(0, 0%, 0%, 1)'
+  /**
+   * Length: 9
+   */
   bg: {
     color: 'hsl(0, 0%, 100%)',
     length: 9,
     position: 'start',
     incLight: 11,
   },
-  // 'hsl(47, 80%, 73%, 1)',
-  // 'hsl(44, 65%, 63%, 1)',
-  // 'hsl(41, 50%, 53%)',
-  // 'hsl(38, 35%, 43%, 1)',
-  // 'hsl(35, 20%, 33%, 1)'
+  /**
+   * Length: 5
+   */
   warning: {
     color: 'hsl(41, 50%, 53%)',
     length: 5,
@@ -91,11 +82,9 @@ export const colors: AllColors = {
     incSaturation: 15,
     incMatrix: 3,
   },
-  // 'hsl(154, 81%, 80%, 1)',
-  // 'hsl(151, 66%, 70%, 1)',
-  // 'hsl(148, 51%, 60%)',
-  // 'hsl(145, 36%, 50%, 1)',
-  // 'hsl(142, 21%, 40%, 1)'
+  /**
+   * Length: 5
+   */
   success: {
     color: 'hsl(148, 51%, 60%)',
     length: 5,
@@ -104,11 +93,9 @@ export const colors: AllColors = {
     incSaturation: 15,
     incMatrix: 3,
   },
-  // 'hsl(280, 85%, 81%, 1)',
-  // 'hsl(283, 70%, 71%, 1)',
-  // 'hsl(286, 55%, 61%)',
-  // 'hsl(289, 40%, 51%, 1)',
-  // 'hsl(292, 25%, 41%, 1)'
+  /**
+   * Length: 5
+   */
   info: {
     color: 'hsl(286, 55%, 61%)',
     length: 5,
@@ -117,6 +104,9 @@ export const colors: AllColors = {
     incSaturation: 15,
     incMatrix: 3,
   },
+  /**
+   * Length: 21
+   */
   black: {
     color: 'hsl(0, 0%, 0%)',
     length: 21,
@@ -124,6 +114,9 @@ export const colors: AllColors = {
     orderLight: true,
     incLight: 5,
   },
+  /**
+   * Length: 21
+   */
   white: {
     color: 'hsl(0, 0%, 100%)',
     length: 21,
@@ -134,6 +127,9 @@ export const colors: AllColors = {
 
 export const DefaultTheme = {
   name: 'default',
+  /**
+   * color = related to the theme, _color = fixed color
+   */
   colors: {
     primary: makeHsl(colors.primary),
     _primary: makeHsl(colors.primary),
@@ -160,22 +156,15 @@ export const DefaultTheme = {
         'Zen Dots, roboto, Open Sans, sans-serif',
       secondary: "'Montserrat', sans-serif",
     },
-    sizes: {
-      xxsmall: '1rem',
-      xsmall: '1.2rem',
-      small: '1.6rem',
-      normal: '1.8rem',
-      medium: '2.4rem',
-      large: '3.2rem',
-      xlarge: '4.0rem',
-      xxlarge: '4.8rem',
-      huge: '5.6rem',
-      xhuge: '6.4rem',
-      xxhuge: '7.2rem',
-      hero: '8.0rem',
-      xhero: '8.8rem',
-      xxhero: '9.6rem',
-    },
+    /**
+     * Length: 10
+     */
+    sizes: makeValue({
+      type: 'em',
+      inc: 0.3,
+      initialValue: 1,
+      length: 10,
+    }),
     lineHeight: {
       tiny: '1',
       small: '1.2',
@@ -190,80 +179,142 @@ export const DefaultTheme = {
       extraBold: '800',
     },
   },
-  sizes: {
-    xsmall: '8rem',
-    small: '1.6rem',
-    medium: '2.4rem',
-    large: '3.2rem',
-    xlarge: '4.0rem',
-    xxlarge: '4.8rem',
-    huge: '5.6rem',
-    xhuge: '6.4rem',
-    max: '96rem',
-    content: '80rem',
-  },
+  /**
+   * inc: 0.5
+   * initialValue: 0.3
+   * Length: 50
+   */
+  sizes: makeValue({
+    type: 'rem',
+    inc: 0.5,
+    initialValue: 0.3,
+    length: 50,
+  }),
   media: {
-    lSmallest: '(max-width: 360px)',
-    lSmall: '(max-width: 576px)',
-    lMedium: '(max-width: 768px)',
-    lLarge: '(max-width: 992px)',
-    gSmallest: '(min-width: 360px)',
-    gSmall: '(min-width: 576px)',
-    gMedium: '(min-width: 768px)',
-    gLarge: '(min-width: 992px)',
-  },
-
-  spacings: {
-    xxtiny: '0.1rem',
-    xtiny: '0.2rem',
-    tiny: '0.4rem',
-    xxsmall: '0.8rem',
-    xsmall: '1.2rem',
-    small: '1.6rem',
-    mediumSmall: '2.0rem',
-    medium: '2.4rem',
-    mediumLarge: '2.8rem',
-    large: '3.2rem',
-    xlarge: '3.6rem',
-    xxlarge: '4.0rem',
-    huge: '4.4rem',
-    xhuge: '4.8rem',
-    xxhuge: '5.6rem',
-    hero: '6.4rem',
-    xhero: '7.2rem',
-    xxhero: '8.0rem',
+    /**
+     * screen < 320px
+     */
+    lMobileS: '(max-width: 320px)',
+    /**
+     * screen < 375px
+     */
+    lMobileM: '(max-width: 375px)',
+    /**
+     * screen < 425px
+     */
+    lMobileL: '(max-width: 425px)',
+    /**
+     * screen < 668px
+     */
+    lTabletS: '(max-width: 668px)',
+    /**
+     * screen < 768px
+     */
+    lTabletM: '(max-width: 768px)',
+    /**
+     * screen < 868px
+     */
+    lTabletL: '(max-width: 868px)',
+    /**
+     * screen < 1024px
+     */
+    lLaptopS: '(max-width: 1024px)',
+    /**
+     * screen < 1366px
+     */
+    lLaptopM: '(max-width: 1366px)',
+    /**
+     * screen < 1440px
+     */
+    lLaptopL: '(max-width: 1440px)',
+    /**
+     * screen < 1920px
+     */
+    lWide: '(max-width: 1920px)',
+    /**
+     * screen < 2560px
+     */
+    lUltraWide: '(max-width: 2560px)',
+    /**
+     * screen < 3840px
+     */
+    l4k: '(max-width: 3840px)',
+    /**
+     * screen > 320px
+     */
+    gMobileS: '(min-width: 320px)',
+    /**
+     * screen > 375px
+     */
+    gMobileM: '(min-width: 375px)',
+    /**
+     * screen > 425px
+     */
+    gMobileL: '(min-width: 425px)',
+    /**
+     * screen > 668px
+     */
+    gTabletS: '(min-width: 668px)',
+    /**
+     * screen > 768px
+     */
+    gTabletM: '(min-width: 768px)',
+    /**
+     * screen > 868px
+     */
+    gTabletL: '(min-width: 868px)',
+    /**
+     * screen > 1024px
+     */
+    gLaptopS: '(min-width: 1024px)',
+    /**
+     * screen > 1366px
+     */
+    gLaptopM: '(min-width: 1366px)',
+    /**
+     * screen > 1440px
+     */
+    gLaptopL: '(min-width: 1440px)',
+    /**
+     * screen > 1920px
+     */
+    gWide: '(min-width: 1920px)',
+    /**
+     * screen > 2560px
+     */
+    gUltraWide: '(min-width: 2560px)',
+    /**
+     * screen > 3840px
+     */
+    g4k: '(min-width: 3840px)',
   },
   frameSizes: {
-    xxsmall: '8rem',
-    xsmall: '12rem',
-    small: '24rem',
-    smallMedium: '32rem',
-    medium: '40rem',
-    largeMedium: '56rem',
-    large: '64rem',
-    xlarge: '80rem',
-    xxlarge: '104rem',
-    max: '120rem',
+    mobileS: '20rem',
+    mobileM: '23.438rem',
+    mobileL: '26.563rem',
+    tabletS: '41.75rem',
+    tabletM: '48rem',
+    tabletL: '54.25rem',
+    laptopS: '64rem',
+    laptopM: '85.375rem',
+    laptopL: '90rem',
+    wide: '120rem',
+    ultraWide: '160rem',
+    u4k: '240rem',
   },
-  transitions: [
-    '100ms',
-    '200ms',
-    '300ms',
-    '500ms',
-    '600ms',
-    '800ms',
-    '1s',
-  ],
-  radius: {
-    none: 0,
-    tiny: '0.2rem',
-    small: '0.4rem',
-    medium: '0.8rem',
-    large: '1rem',
-    xlarge: '10rem',
-    xxlarge: '100rem',
-    circle: '10%',
-  },
+  /**
+   * Length: 30
+   */
+  transitions: makeValue({
+    type: 'ms',
+    initialValue: 100,
+    inc: 200,
+    length: 30,
+    decimalPlaces: 0,
+  }),
+  /**
+   * Length: 10
+   */
   layers: [
     '0',
     '1',

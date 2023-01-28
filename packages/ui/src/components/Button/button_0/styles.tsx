@@ -26,20 +26,17 @@ export const Main = styled.button<mainProps>`
     background: var(--bg);
     border: none;
     color: var(--color);
-    font-size: ${theme.fonts.sizes.medium};
-    padding: ${theme.spacings.xsmall}
-      ${theme.spacings.medium};
+    font-size: ${theme.fonts.sizes[4]};
+    padding: ${theme.sizes[2]} ${theme.sizes[2]};
     cursor: pointer;
-    border-radius: ${theme.spacings.tiny};
-    transition: transform ${theme.transitions[0]}
-      ease-in-out;
+    border-radius: ${theme.sizes[1]};
+    transition: padding ${theme.transitions[1]} ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
     ${theme.name === 'default' &&
     css`
-      box-shadow: 0px 0px 20px
-        ${theme.colors.white[8]};
+      box-shadow: 0px 0px 20px ${theme.colors.white[8]};
     `}
     > svg {
       width: 2rem;
@@ -53,12 +50,11 @@ export const Main = styled.button<mainProps>`
           `}
     }
 
-    ${dynamicButton()}
+    ${dynamicButton(theme)}
 
     ${!!onlyIcon &&
     css`
-      padding: ${theme.spacings.xsmall}
-        ${theme.spacings.xsmall};
+      padding: ${theme.sizes[3]} ${theme.sizes[3]};
       border-radius: 50%;
       > svg {
         margin-left: 0;

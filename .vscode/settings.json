@@ -1,4 +1,8 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "code-runner.executorMap": {
+    "typescript": "ts-node  -r sucrase/register -r dotenv/config  --esm",
+    "javascript": "node -r dotenv/config --es-module-specifier-resolution=node"
+  }
 }

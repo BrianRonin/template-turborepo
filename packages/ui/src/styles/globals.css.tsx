@@ -28,7 +28,7 @@ const GlobalStyles = () => {
         --body-bg: ${theme.colors.bg[0]};
         body {
           background: ${theme.colors.bg[0]};
-          font-size: 16px;
+          font-size: ${theme.fonts.sizes[2]};
           color: ${theme.colors.text[4]};
         }
         h1,
@@ -37,16 +37,16 @@ const GlobalStyles = () => {
         h4,
         h5,
         h6 {
-          font-weight: 300;
-          margin: ${theme.spacings.large} 0;
+          font-weight: ${theme.fonts.weight.bold};
+          margin: ${theme.sizes[8]} 0;
         }
 
-        @media ${theme.media.lMedium} {
+        @media ${theme.media.lLaptopM} {
           button {
-            font-size: 1em !important;
+            font-size: ${theme.fonts.sizes[1]} !important;
           }
           input {
-            font-size: 1em !important;
+            font-size: ${theme.fonts.sizes[1]} !important;
           }
         }
       `}
