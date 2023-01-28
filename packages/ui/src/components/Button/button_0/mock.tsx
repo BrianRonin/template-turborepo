@@ -18,14 +18,6 @@ const mock: Props = {
   children: 'children',
   iconDirection: 'left',
   outline: false,
-  loadingSettings: {
-    children: 'children',
-    iconDirection: 'right',
-    meta: {
-      style: { color: 'rgba(0, 0, 0, 0)' },
-    },
-    disabled: true,
-  },
   isLoading: false,
 }
 

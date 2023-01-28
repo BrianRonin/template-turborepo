@@ -118,6 +118,7 @@ importers:
       '@types/react-dom': ^18.0.9
       '@vitejs/plugin-react': ^3.0.1
       '@vitejs/plugin-react-swc': ^3.0.0
+      chromatic: ^6.11.4
       emotion-swc-plugin: ^0.0.5
       prop-types: 15.8.1
       react: ^18.2.0
@@ -151,6 +152,7 @@ importers:
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
       '@vitejs/plugin-react-swc': 3.0.1_vite@4.0.4
+      chromatic: 6.15.0
       prop-types: 15.8.1
       storybook: 7.0.0-beta.34
       sucrase: 3.29.0
@@ -3511,7 +3513,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.1
       '@types/keyv': 3.1.4
-      '@types/node': 18.11.9
+      '@types/node': 18.11.18
       '@types/responselike': 1.0.0
     dev: true
 
@@ -3637,7 +3639,7 @@ packages:
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.11.18
     dev: true
 
   /@types/liftoff/4.0.0:
@@ -3744,7 +3746,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.11.18
     dev: true
 
   /@types/scheduler/0.16.2:

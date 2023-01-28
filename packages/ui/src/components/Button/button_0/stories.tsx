@@ -17,7 +17,18 @@ const meta = {
   },
   argTypes: {
     loadingSettings: {
-      control: false,
+      options: ['base'],
+      mapping: {
+        base: {
+          icon: <Loading />,
+          children: 'children',
+          iconDirection: 'right',
+          meta: {
+            style: { color: 'rgba(0, 0, 0, 0)' },
+          },
+          disabled: true,
+        },
+      },
     },
     meta: {
       control: false,
@@ -38,21 +49,13 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Base: Story = {}
+
 export const Outline: Story = {
   args: {
     outline: true,
-    loadingSettings: {
-      outline: true,
-    },
-  },
-  render: (args) => {
-    return (
-      <C0Button {...args}>
-        <Loading />
-      </C0Button>
-    )
   },
 }
+
 export const Icon: Story = {
   args: {
     outline: false,
