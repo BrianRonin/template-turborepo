@@ -17,21 +17,21 @@ export const Theme = {
 
 // *** Components ***
 
-// * Texts
-export * as Text0 from './components/Text/text_0'
-export * as Heading0 from './components/Text/heading_0'
+// * Text
+export * from './components/Text/text_0'
+export * from './components/Text/heading_0'
 
-// * Switchs
-export * as Toggle0 from './components/Switch/toggle_0'
-export * as ToggleTheme0 from './components/Switch/toggle_theme'
+// * Switch
+export * from './components/Switch/toggle_0'
+export * from './components/Switch/toggle_theme'
 
-// * Buttons
-export * as Button0 from './components/Button/button_0'
+// * Button
+export * from './components/Button/button_0'
 // export * as Button1 from './components/Button/button_1'
 
-// * Containers
-export * as Container0 from './components/Container/container_0/styles'
-export * as Container1 from './components/Container/container_1'
+// * Container
+export * from './components/Container/container_0/styles'
+export * from './components/Container/container_1'
 
 // *** Utils ***
 

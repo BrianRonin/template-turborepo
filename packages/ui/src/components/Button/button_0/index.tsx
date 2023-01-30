@@ -11,7 +11,6 @@ export const C0Button: React.FC<T.Props> = (
   userSettings
 ) => {
   const theme = useTheme()
-
   const preset: T.Settings = {
     iconDirection: 'left',
     children: undefined,

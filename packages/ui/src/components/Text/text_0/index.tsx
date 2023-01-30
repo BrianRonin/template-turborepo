@@ -5,30 +5,20 @@ export * as S0Text from './styles'
 export * as M0Text from './mock'
 
 export const C0Text = ({ children }: T.Props) => {
-  if (typeof children === 'string') {
+  const text = children?.toString()
+  if (text)
     return (
       <S.Main
         dangerouslySetInnerHTML={{
-          __html: children,
+          __html: text,
         }}
       />
     )
-  } else {
-    const text = children?.toString()
-    if (text)
-      return (
-        <S.Main
-          dangerouslySetInnerHTML={{
-            __html: text,
-          }}
-        />
-      )
-    return (
-      <S.Main
-        dangerouslySetInnerHTML={{
-          __html: 'sem texto',
-        }}
-      />
-    )
-  }
+  return (
+    <S.Main
+      dangerouslySetInnerHTML={{
+        __html: 'sem texto',
+      }}
+    />
+  )
 }

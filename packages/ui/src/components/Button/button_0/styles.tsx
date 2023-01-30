@@ -22,7 +22,7 @@ export const Main = styled.button<mainProps>`
     --color: ${custom.enabled.color};
     --ds-color: ${custom.disabled.color};
     --ds-bg: ${custom.disabled.bg};
-
+    font-family: 'LatoRegular';
     background: var(--bg);
     border: none;
     color: var(--color);

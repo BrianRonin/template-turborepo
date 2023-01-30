@@ -5,14 +5,16 @@ import {
 } from '@emotion/react'
 import { CSS_ScrollBar } from './css/scrollbar/scrollbar_1.css'
 import { CSS_notSelect } from './css/selection.css'
+import myFonts from './fonts.css'
 
 const GlobalStyles = () => {
   const theme = useTheme()
 
   return (
     <Global
-      styles={css`
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+    styles={css`
+        ${myFonts}
+        
         * {
           margin: 0;
           padding: 0;

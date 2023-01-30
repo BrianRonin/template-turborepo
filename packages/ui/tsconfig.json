@@ -17,7 +17,10 @@
     "jsx": "react-jsx",
     "experimentalDecorators": true
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "src/stories/fonts.stories.tsx"
+  ],
   "references": [
     { "path": "./tsconfig.node.json" }
   ]

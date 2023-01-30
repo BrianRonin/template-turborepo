@@ -13,6 +13,11 @@ const meta = {
     layout: 'centered',
     background: null,
   },
+  argTypes: {
+    children: {
+      type: 'string',
+    },
+  },
 } satisfies Meta<typeof C0Text>
 
 export default meta

@@ -1,6 +1,8 @@
+import { ReactNode } from 'react'
+
 export type Props = {
   /**
    * Basta enviar como children oque deseja
    */
-  children: string | React.ReactNode
+  children: ReactNode
 }

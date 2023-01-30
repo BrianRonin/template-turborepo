@@ -162,7 +162,7 @@ export const DefaultTheme = {
     sizes: makeValue({
       type: 'em',
       inc: 0.3,
-      initialValue: 1,
+      initialValue: 0.8,
       length: 10,
     }),
     lineHeight: {
@@ -187,7 +187,7 @@ export const DefaultTheme = {
   sizes: makeValue({
     type: 'rem',
     inc: 0.5,
-    initialValue: 0.3,
+    initialValue: 0.1,
     length: 50,
   }),
   media: {

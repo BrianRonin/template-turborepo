@@ -1,8 +1,7 @@
-import { ReactNode } from 'react'
-import { Text0 } from 'ui'
-import { ToggleTheme0 } from 'ui'
-
 import * as S from './styles'
+import { ReactNode } from 'react'
+import { ToggleTheme } from 'ui'
+
 export type baseProps = {
   children: ReactNode
 }
@@ -10,8 +9,7 @@ export type baseProps = {
 export const Base = ({ children }: baseProps) => {
   return (
     <S.Main>
-      <ToggleTheme0.ToggleTheme />
-      <Text0.Text>testando</Text0.Text>
+      <ToggleTheme />
       {children}
     </S.Main>
   )

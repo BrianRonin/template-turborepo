@@ -52,12 +52,11 @@ export const makeValue = (
   return resolve
 }
 
-// const yyy = makeValue({
-//   initialValue: 100,
-//   inc: 200,
-//   length: 30,
-//   type: 'ms',
-//   decimalPlaces: 0,
-// })
+const yyy = makeValue({
+  type: 'rem',
+  inc: 0.1,
+  initialValue: 0.07,
+  length: 10,
+})
 
-// console.log(yyy)
+console.log(yyy)

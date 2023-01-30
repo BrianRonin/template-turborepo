@@ -13,7 +13,7 @@ export const Inside = styled.div<T1Container.Custom>`
           boxShadowOnHover ?? 'primary'
         ][4]};
     background: ${theme.colors.bg[0]};
-    padding: ${theme.spacings.medium};
+    padding: ${theme.sizes[3]};
     width: 100%;
     border-radius: 3rem;
     box-shadow: 0 0.2rem 1rem var(--box-shadow);

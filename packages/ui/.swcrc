@@ -1,7 +1,0 @@
-{
-  "jsc": {
-    "experimental": {
-      "plugins": [["emotion-swc-plugin"]]
-    }
-  }
-}

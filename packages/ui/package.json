@@ -1,22 +1,26 @@
 {
   "name": "ui",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
+  "types": "./src/index.tsx",
+  "main": "./src/index.tsx",
+  "files": [
+    "./src/components/**"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "story": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-story": "storybook build -o ../../apps/storybook/dist",
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@swc/plugin-styled-components": "^1.5.37",
     "@vitejs/plugin-react": "^3.0.1",
-    "emotion-swc-plugin": "^0.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1"
@@ -41,5 +45,10 @@
     "sucrase": "^3.29.0",
     "typescript": "^4.9.3",
     "vite": "^4.0.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "ui@0.0.0"
 }

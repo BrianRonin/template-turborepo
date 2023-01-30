@@ -8,4 +8,5 @@ export type Props = {
    * Todas letras maiusculas?
    */
   uppercase?: boolean
+  fontFamily?: string
 }

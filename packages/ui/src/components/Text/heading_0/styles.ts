@@ -7,36 +7,39 @@ type props = Omit<T0Heading.Props, 'children'>
 
 const titleSize = {
   small: (theme: Theme) => css`
-    font-size: ${theme.sizes.medium};
+    font-size: ${theme.fonts.sizes[3]};
   `,
   medium: (theme: Theme) => css`
-    font-size: ${theme.sizes.large};
+    font-size: ${theme.fonts.sizes[4]};
   `,
   big: (theme: Theme) => css`
-    font-size: ${theme.sizes.xlarge};
-    @media ${theme.media.lMedium} {
-      font-size: ${theme.sizes.large};
+    font-size: ${theme.fonts.sizes[5]};
+    @media ${theme.media.lTabletM} {
+      font-size: ${theme.fonts.sizes[3]};
     }
   `,
   huge: (theme: Theme) => css`
-    font-size: ${theme.sizes.xhuge};
+    font-size: ${theme.fonts.sizes[7]};
     ${mediaFont(theme)}
   `,
 }
 
 const mediaFont = (theme: Theme) => css`
-  @media ${theme.media.lMedium} {
-    font-size: ${theme.sizes.xlarge};
+  @media ${theme.media.lTabletM} {
+    font-size: ${theme.fonts.sizes[2]};
   }
 `
 
 export const Main = styled.h1<props>`
-  ${({ theme, size, uppercase }) => css`
+  ${({ theme, size, uppercase, fontFamily }) => css`
     ${CSS_select(theme)}
     color: ${theme.colors.text[4]};
     text-transform: ${uppercase
       ? 'uppercase'
       : 'none'};
     ${!!size && titleSize[size](theme)};
+    ${!!fontFamily && css`
+      font-family: ${fontFamily};
+    `}
   `}
 `

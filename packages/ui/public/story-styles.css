@@ -5,7 +5,6 @@
     --type: rgb(216, 241, 204);
   }
 
-
   .sbdocs-wrapper {
     background: var(--bg) !important;
   }
@@ -24,6 +23,27 @@
   .docblock-argstable {
     background: var(--bg) !important;
   }
+
+
+  /* Typeset Fonts */
+
+  .docblock-typeset {
+    color: var(--text) !important;
+    background: var(--bg) !important;
+    border: none !important;
+  }
+
+  .docblock-typeset>div>div {
+    color: var(--text) !important;
+    background: var(--bg) !important;
+    border: none !important;
+  }
+
+  .sbdocs-content>p {
+    color: var(--text) !important;
+    background: var(--bg) !important;
+  }
+
 
   .sbdocs-title {
     color: var(--text) !important;
@@ -54,6 +74,11 @@
     color: var(--text) !important;
     border: none;
     font-size: 1.3em;
+  }
+
+  .docblock-argstable-body>tr>td>label>textarea {
+    resize: vertical !important;
+    min-height: 2.8em !important;
   }
 
   /*  Code */
