@@ -25,7 +25,7 @@ export const getFonts = ({
   format = 'truetype',
   meta,
 }: confGetFonts) => {
-  return types.map(
+  return ['', ...types].map(
     (Type) => css`
       @font-face {
         font-family: ${name}${Type};
@@ -35,7 +35,7 @@ export const getFonts = ({
             return css`
               ${key}: ${meta[key]};
             `.styles
-          }).join()}
+          }).join('\n')}
       }
     `.styles
   ).join('\n')

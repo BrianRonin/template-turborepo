@@ -48,8 +48,6 @@ const Template = ({
   ...args
 }: { fontTypes: string[] } & T0Heading.Props) => {
   const resolve = fontTypes.map((type, i) => {
-    console.log('type: ', type)
-    console.log('inde: ', i)
     const fontFamily =
       (args.meta?.style?.fontFamily ?? '') + type
     return (
@@ -218,6 +216,297 @@ export const Grupter: Story = {
     meta: {
       style: {
         fontFamily: 'Grupter',
+      },
+    },
+  },
+}
+
+export const Josefin: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.josefin),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Josefin',
+      },
+    },
+  },
+}
+
+export const Kumar: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.kumar),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Kumar',
+      },
+    },
+  },
+}
+
+export const Messiri: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.messiri),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Messiri',
+      },
+    },
+  },
+}
+
+export const SerifChinese: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(
+        fontTypes.serifChinese
+      ),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'SerifChinese',
+      },
+    },
+  },
+}
+
+export const SilkscreenPixel: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(
+        fontTypes.silkscreenPixel
+      ),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'SilkscreenPixel',
+      },
+    },
+  },
+}
+
+export const Texturina: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.texturina),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Texturina',
+      },
+    },
+  },
+}
+
+export const Trispace: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.trispace),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Trispace',
+      },
+    },
+  },
+}
+
+export const Almendra: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.almendra),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Almendra',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const ComingSoon: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(
+        fontTypes.comingSoon
+      ),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'ComingSoon',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const GideonRoman: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(
+        fontTypes.gideonRoman
+      ),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'GideonRoman',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const ImFell: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.imFell),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'ImFell',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const Junge: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.junge),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Junge',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const LuxuriousRoman: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(
+        fontTypes.luxuriousRoman
+      ),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'LuxuriousRoman',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const Megrim: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.megrim),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Megrim',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const Michelia: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.michelia),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Michelia',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const PoiredOne: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.poiredOne),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'PoiredOne',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const Rye: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.rye),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Rye',
+        fontWeight: 800,
+      },
+    },
+  },
+}
+
+export const Sofia: Story = {
+  render: (args) =>
+    Template({
+      ...args,
+      fontTypes: Object.keys(fontTypes.sofia),
+    }),
+  args: {
+    meta: {
+      style: {
+        fontFamily: 'Sofia',
+        fontWeight: 800,
       },
     },
   },

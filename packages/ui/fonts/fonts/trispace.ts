@@ -1,28 +1,31 @@
 import { getFonts } from '../get-fonts.css'
 
 const types = [
-  'Light',
   'Bold',
+  'ExtraBold',
+  'ExtraLight',
+  'Light',
   'Medium',
   'Regular',
   'SemiBold',
+  'Thin',
 ]
 
 type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const cormorantFontTypes =
+export const trispaceFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Cormorant' + type
+    acc[type] = 'Trispace' + type
     return acc
   }, {} as fontTypes)
 
-const cormorantFonts = getFonts({
-  name: 'Cormorant',
+const trispaceFonts = getFonts({
+  name: 'Trispace',
   format: 'truetype',
-  path: '/fonts/cormorant/{{ type }}.ttf',
+  path: '/fonts/trispace/static/Trispace/{{ type }}.ttf',
   types: types,
 })
 
-export default cormorantFonts
+export default trispaceFonts

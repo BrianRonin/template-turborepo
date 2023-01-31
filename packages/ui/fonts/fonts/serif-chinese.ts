@@ -1,8 +1,10 @@
 import { getFonts } from '../get-fonts.css'
 
 const types = [
-  'Light',
+  'Black',
   'Bold',
+  'ExtraLight',
+  'Light',
   'Medium',
   'Regular',
   'SemiBold',
@@ -12,17 +14,17 @@ type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const cormorantFontTypes =
+export const serifChineseFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Cormorant' + type
+    acc[type] = 'SerifChinese' + type
     return acc
   }, {} as fontTypes)
 
-const cormorantFonts = getFonts({
-  name: 'Cormorant',
-  format: 'truetype',
-  path: '/fonts/cormorant/{{ type }}.ttf',
+const serifChineseFonts = getFonts({
+  name: 'SerifChinese',
+  format: 'opentype',
+  path: '/fonts/serif-chinese/{{ type }}.otf',
   types: types,
 })
 
-export default cormorantFonts
+export default serifChineseFonts

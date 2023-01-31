@@ -1,7 +1,6 @@
 import { getFonts } from '../get-fonts.css'
 
 const types = [
-  'Light',
   'Bold',
   'Medium',
   'Regular',
@@ -12,17 +11,17 @@ type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const cormorantFontTypes =
+export const messiriFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Cormorant' + type
+    acc[type] = 'Messiri' + type
     return acc
   }, {} as fontTypes)
 
-const cormorantFonts = getFonts({
-  name: 'Cormorant',
+const messiriFonts = getFonts({
+  name: 'Messiri',
   format: 'truetype',
-  path: '/fonts/cormorant/{{ type }}.ttf',
+  path: '/fonts/messiri/static/{{ type }}.ttf',
   types: types,
 })
 
-export default cormorantFonts
+export default messiriFonts

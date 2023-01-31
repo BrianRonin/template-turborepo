@@ -1,22 +1,22 @@
 import { getFonts } from '../get-fonts.css'
 
-const types = ['Italic', 'Regular']
+const types = ['Regular']
 
 type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const geoFontTypes =
+export const jungeFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Geo' + type
+    acc[type] = 'Junge' + type
     return acc
   }, {} as fontTypes)
 
-const geoFonts = getFonts({
-  name: 'Geo',
+const jungeFonts = getFonts({
+  name: 'Junge',
   format: 'truetype',
-  path: '/fonts/geo/{{ type }}.ttf',
+  path: '/fonts/junge.ttf',
   types: types,
 })
 
-export default geoFonts
+export default jungeFonts

@@ -1,6 +1,6 @@
 import { getFonts } from '../get-fonts.css'
 
-const types = ['circular ❌', 'rounded', 'square']
+const types = ['circular', 'rounded', 'square']
 
 type fontTypes = {
   [key in (typeof types)[number]]: string

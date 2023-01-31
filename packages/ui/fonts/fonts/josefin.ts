@@ -1,12 +1,8 @@
 import { getFonts } from '../get-fonts.css'
 
 const types = [
-  'Black',
-  'BlackItalic',
   'Bold',
   'BoldItalic',
-  'ExtraBold',
-  'ExtraBoldItalic',
   'ExtraLight',
   'ExtraLightItalic',
   'Italic',
@@ -19,20 +15,23 @@ const types = [
   'SemiBoldItalic',
   'Thin',
   'ThinItalic',
-] as const
+]
 
 type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const montserratFontTypes =
+export const josefinFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Montserrat' + type
+    acc[type] = 'Josefin' + type
     return acc
   }, {} as fontTypes)
 
-export const montserratFonts = getFonts({
-  name: 'Montserrat',
-  path: '/fonts/montserrat/{{ type }}.ttf',
-  types: types.slice(),
+const josefinFonts = getFonts({
+  name: 'Josefin',
+  format: 'truetype',
+  path: '/fonts/josefin/static/{{ type }}.ttf',
+  types: types,
 })
+
+export default josefinFonts

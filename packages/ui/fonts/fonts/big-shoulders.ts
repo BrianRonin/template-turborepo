@@ -1,7 +1,7 @@
 import { getFonts } from '../get-fonts.css'
 
 const types = [
-  'Black ❌',
+  'Black',
   'BlackItalic ❌',
   'Bold',
   'BoldItalic ❌',

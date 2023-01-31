@@ -51,12 +51,3 @@ export const makeValue = (
   }
   return resolve
 }
-
-const yyy = makeValue({
-  type: 'rem',
-  inc: 0.1,
-  initialValue: 0.07,
-  length: 10,
-})
-
-console.log(yyy)

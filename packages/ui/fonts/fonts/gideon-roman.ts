@@ -1,22 +1,22 @@
 import { getFonts } from '../get-fonts.css'
 
-const types = ['Italic', 'Regular']
+const types = ['Regular']
 
 type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const geoFontTypes =
+export const gideonRomanFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Geo' + type
+    acc[type] = 'GideonRoman' + type
     return acc
   }, {} as fontTypes)
 
-const geoFonts = getFonts({
-  name: 'Geo',
+const gideonRomanFonts = getFonts({
+  name: 'GideonRoman',
   format: 'truetype',
-  path: '/fonts/geo/{{ type }}.ttf',
+  path: '/fonts/gideon-roman.ttf',
   types: types,
 })
 
-export default geoFonts
+export default gideonRomanFonts

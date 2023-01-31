@@ -224,12 +224,3 @@ export const makeHsl = (
   }
   return resolve
 }
-console.log(
-  makeHsl({
-    color: 'hsl(0, 0%, 100%)',
-    length: 5,
-    position: 'start',
-    incLight: 20,
-    orderLight: false,
-  }),
-)

@@ -1,22 +1,22 @@
 import { getFonts } from '../get-fonts.css'
 
-const types = ['Bold', 'Regular']
+const types = ['Regular']
 
 type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const arefruqaaFontTypes =
+export const micheliaFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Arefruqaa' + type
+    acc[type] = 'Michelia' + type
     return acc
   }, {} as fontTypes)
 
-const arefruqaaFonts = getFonts({
-  name: 'Arefruqaa',
+const micheliaFonts = getFonts({
+  name: 'Michelia',
   format: 'opentype',
-  path: '/fonts/arefruqaa/{{ type }}.ttf',
+  path: '/fonts/michelia.otf',
   types: types,
 })
 
-export default arefruqaaFonts
+export default micheliaFonts

@@ -7,8 +7,6 @@ const types = [
   'BoldItalic',
   'ExtraBold',
   'ExtraBoldItalic',
-  'ExtraLight',
-  'ExtraLightItalic',
   'Italic',
   'Light',
   'LightItalic',
@@ -19,20 +17,23 @@ const types = [
   'SemiBoldItalic',
   'Thin',
   'ThinItalic',
-] as const
+]
 
 type fontTypes = {
   [key in (typeof types)[number]]: string
 }
 
-export const montserratFontTypes =
+export const texturinaFontTypes =
   types.reduce<fontTypes>((acc, type) => {
-    acc[type] = 'Montserrat' + type
+    acc[type] = 'Texturina' + type
     return acc
   }, {} as fontTypes)
 
-export const montserratFonts = getFonts({
-  name: 'Montserrat',
-  path: '/fonts/montserrat/{{ type }}.ttf',
-  types: types.slice(),
+const texturinaFonts = getFonts({
+  name: 'Texturina',
+  format: 'truetype',
+  path: '/fonts/texturina/static/Texturina_28pt/{{ type }}.ttf',
+  types: types,
 })
+
+export default texturinaFonts
