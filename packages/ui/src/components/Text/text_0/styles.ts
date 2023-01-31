@@ -5,7 +5,7 @@ import { CSS_select } from '../../../styles/css/selection.css'
 export const Main = styled.div`
   ${({ theme }) => css`
     ${CSS_select(theme)}
-    font-size: ${theme.fonts.sizes[0]};
+    font-size: ${theme.fonts.sizes[2]};
     color: ${theme.colors.text[4]};
   `}
 `

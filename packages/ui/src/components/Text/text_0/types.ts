@@ -5,4 +5,5 @@ export type Props = {
    * Basta enviar como children oque deseja
    */
   children: ReactNode
+  meta?: React.HTMLAttributes<HTMLDivElement>
 }

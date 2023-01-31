@@ -12,7 +12,7 @@ const config: StorybookConfig = {
       to: '/assets',
     },
     {
-      from: '../fonts/',
+      from: '../fonts/public',
       to: '/fonts',
     },
   ],

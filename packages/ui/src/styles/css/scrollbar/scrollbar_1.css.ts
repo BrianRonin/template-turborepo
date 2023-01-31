@@ -11,7 +11,7 @@ export const CSS_ScrollBar = (
   }
   &::-webkit-scrollbar-thumb {
     ${theme.name === 'default' && css`
-      background: ${theme.colors._black[3]};
+      background: ${theme.colors._white[3]};
     `}
     ${theme.name === 'dark' && css`
       background: ${theme.colors._primary[0]};

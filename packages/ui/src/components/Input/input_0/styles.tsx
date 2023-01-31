@@ -5,9 +5,9 @@ const onInputError = (
   theme: Theme,
   errorMessage: string,
 ) => css`
-  border: ${theme.sizes[2]} solid ${theme.colors.warning[0]};
+  border: ${theme.sizes[0]} solid ${theme.colors.warning[0]};
   &:focus {
-    border: ${theme.sizes[2]} solid ${theme.colors.warning[0]};
+    border: ${theme.sizes[0]} solid ${theme.colors.warning[0]};
     box-shadow: 0 0 ${theme.sizes[2]} ${theme.colors.warning[2]};
   }
   /* ${!!errorMessage &&
@@ -41,7 +41,7 @@ export const inputContainer = styled.div<{
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
-      right: 13px;
+      right: 10px;
       width: 2.5rem;
       height: 2.5rem;
       color: ${theme.colors._primary[2]};
@@ -85,6 +85,7 @@ export const Input = styled.input<StyledInputType>`
     width: 100%;
     font-size: ${theme.fonts.sizes[4]};
     padding: ${theme.sizes[2]} ${theme.sizes[2]};
+    padding-right: ${theme.sizes[8]};
     background: ${theme.colors.bg[1]};
     border-radius: ${theme.sizes[1]};
     outline: none;
@@ -133,10 +134,11 @@ export const Label = styled.label<{
     display: inline;
     position: absolute;
     top: 50%;
+    font-family: ${theme.fonts.family.lato.Black};
     transform: translate(0, -50%);
     left: ${theme.sizes[1]};
     font-size: ${theme.fonts.sizes[1]};
-    height: ${theme.fonts.sizes[1]};
+    height: ${theme.fonts.sizes[2]};
     transition: ${theme.transitions[2]};
     padding: 0.5rem 1rem;
     display: flex;

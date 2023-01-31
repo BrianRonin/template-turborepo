@@ -9,14 +9,14 @@ export const C0Heading = ({
   as = 'h2',
   size = 'huge',
   uppercase = false,
-  fontFamily,
+  meta,
 }: T.Props) => {
   return (
     <S.Main
       as={as}
       size={size}
       uppercase={uppercase}
-      fontFamily={fontFamily}
+      {...meta}
     >
       {children}
     </S.Main>

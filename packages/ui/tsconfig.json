@@ -19,7 +19,8 @@
   },
   "include": [
     "src",
-    "src/stories/fonts.stories.tsx"
+    "src/stories/fonts.stories.tsx",
+    "fonts"
   ],
   "references": [
     { "path": "./tsconfig.node.json" }

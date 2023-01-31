@@ -1,9 +1,7 @@
 import { T0Text } from '.'
 
-export default {
-  children: `
-    ipsum dolor sit amet consectetur adipisicing elit. Et nesciunt temp
-    oribus vero atque error magni beatae quaerat quo dolor obcaecati pa
-    riatur ullam fugit, dolorum sit dolore quisquam explicabo eligendi
-    molestias.`,
-} as T0Text.Props
+const mock: T0Text.Props = {
+  children: `O homem olha para o mundo exterior para buscar sua salvação; imagina que poderá encontrar felicidade ao possuir algumas de suas formas. Mas não poderá encontrar felicidade nessas formas se não a puder encontrar em sua própria mente, pois é a sua mente que faz as formas...`,
+}
+
+export default mock

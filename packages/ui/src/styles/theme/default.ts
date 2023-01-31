@@ -1,3 +1,4 @@
+import { fontTypes } from '../../../fonts'
 import {
   hslProps,
   makeHsl,
@@ -152,9 +153,9 @@ export const DefaultTheme = {
   },
   fonts: {
     family: {
-      default:
-        'Zen Dots, roboto, Open Sans, sans-serif',
-      secondary: "'Montserrat', sans-serif",
+      default: `${fontTypes.lato.Regular}, roboto, Open Sans, sans-serif`,
+      secondary: `${fontTypes.montserrat.Black}, sans-serif`,
+      ...fontTypes,
     },
     /**
      * Length: 10
