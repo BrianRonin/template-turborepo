@@ -19,7 +19,7 @@ const defaultText = `O homem olha para o mundo exterior para buscar sua salva√ß√
 const meta = {
   title: 'Fonts',
   component: C0Heading,
-  tags: ['autodocs'],
+  tags: ['fonts'],
 
   args: {
     ...M0Heading.default,

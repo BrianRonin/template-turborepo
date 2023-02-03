@@ -9,7 +9,7 @@
     "./src/components/**"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "storybook dev -p 6006",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "story": "storybook dev -p 6006",
@@ -40,6 +40,8 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "chromatic": "^6.11.4",
+    "my-plopjs": "^1.1.23",
+    "plop": "^3.1.1",
     "prop-types": "15.8.1",
     "storybook": "7.0.0-beta.34",
     "sucrase": "^3.29.0",

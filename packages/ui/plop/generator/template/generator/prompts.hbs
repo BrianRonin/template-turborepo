@@ -1,0 +1,21 @@
+import case_modifiers from '../../utils/case_modifiers'
+import Transform from './template.js'
+import { PlopGeneratorConfig } from 'plop'
+
+export type Input = {
+  name: string,__typesInput____customizeChoiceTypes__
+}
+
+const prompts: Partial<PlopGeneratorConfig['prompts']> = [
+  {
+    type: 'input',
+    name: 'name',
+    message: 'name: ',
+    filter: (input) => {
+      Transform.Var.name = input
+      return input
+    },
+  },__inputs____customizeFiles__
+]
+
+export default prompts

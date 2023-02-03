@@ -31,15 +31,12 @@ const mediaFont = (theme: Theme) => css`
 `
 
 export const Main = styled.h1<props>`
-  ${({ theme, size, uppercase, fontFamily }) => css`
+  ${({ theme, size, uppercase }) => css`
     ${CSS_select(theme)}
     color: ${theme.colors.text[4]};
     text-transform: ${uppercase
       ? 'uppercase'
       : 'none'};
     ${!!size && titleSize[size](theme)};
-    ${!!fontFamily && css`
-      font-family: ${fontFamily};
-    `}
   `}
 `
