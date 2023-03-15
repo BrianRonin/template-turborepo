@@ -32,11 +32,11 @@ export type hslProps = {
    */
   orderAlpha?: boolean
   /**
-   * reverse order of matrix
+   * increment matrix
    */
   incMatrix?: number
   /**
-   * reverse order of saturation
+   * incremetn saturation
    */
   incSaturation?: number
   /**
